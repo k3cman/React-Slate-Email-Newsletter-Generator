@@ -16,6 +16,7 @@ body {
 }
 
 .toolbar {
+  display: none;
   width: 300px;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.05);

@@ -2,6 +2,10 @@ import React, { Component, Fragment } from "react";
 import { Editor } from "slate-react";
 import { Value } from "slate";
 import initialValue from "./value.json";
+import Logo from "./elements/Logo";
+import HeadTitle from "./elements/HeadTitle";
+import HeadSubTitle from "./elements/HeadSubTitle.js";
+import MainImg from "./elements/MainImg.js";
 
 const DEFAULT_DONE = "paragraph";
 
@@ -52,6 +56,14 @@ export default class EditorMain extends Component {
   renderNode = (props, editor, next) => {
     const { attributes, children, node } = props;
     switch (node.type) {
+      case "logo":
+        return <Logo {...attributes} />;
+      case "head-title":
+        return <HeadTitle {...attributes}>{children}</HeadTitle>;
+      case "head-sub":
+        return <HeadSubTitle {...attributes}>{children}</HeadSubTitle>;
+      case "main-image":
+        return <MainImg {...attributes} />;
       case "headnig-one":
         return <h1 {...attributes}>{children}</h1>;
       default:
