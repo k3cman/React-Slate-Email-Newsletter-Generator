@@ -6,6 +6,8 @@ import Logo from "./elements/Logo";
 import HeadTitle from "./elements/HeadTitle";
 import HeadSubTitle from "./elements/HeadSubTitle.js";
 import MainImg from "./elements/MainImg.js";
+import SimpleText from "./elements/SimpleText.js";
+import Product from "./elements/Product.js";
 
 const DEFAULT_DONE = "paragraph";
 
@@ -30,17 +32,19 @@ export default class EditorMain extends Component {
   render() {
     return (
       <Fragment>
-        <Editor
-          className="editor"
-          spellCheck={false}
-          ref={this.ref}
-          autoFocus
-          placeholder="Enter some rich text"
-          value={this.state.value}
-          onChange={this.onChange}
-          renderNode={this.renderNode}
-          renderMark={this.renderMark}
-        />
+        <div className="editor-wrapper">
+          <Editor
+            className="editor"
+            spellCheck={false}
+            ref={this.ref}
+            autoFocus
+            placeholder="Enter some rich text"
+            value={this.state.value}
+            onChange={this.onChange}
+            renderNode={this.renderNode}
+            renderMark={this.renderMark}
+          />
+        </div>
         <div className="toolbar">
           <ul>
             <li>IC</li>
@@ -64,6 +68,10 @@ export default class EditorMain extends Component {
         return <HeadSubTitle {...attributes}>{children}</HeadSubTitle>;
       case "main-image":
         return <MainImg {...attributes} />;
+      case "simple-text":
+        return <SimpleText {...attributes}>{children}</SimpleText>;
+      case "product-row":
+        return <Product {...attributes} />;
       case "headnig-one":
         return <h1 {...attributes}>{children}</h1>;
       default:

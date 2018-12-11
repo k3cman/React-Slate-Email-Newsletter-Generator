@@ -36,6 +36,24 @@
       {
         "object": "block",
         "type": "main-image"
+      },
+      {
+        "object": "block",
+        "type": "simple-text",
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [{ "text": "Proizvođač Marazzi Group" }]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "product-row"
+      },
+      {
+        "object": "block",
+        "type": "product-row"
       }
     ]
   }
