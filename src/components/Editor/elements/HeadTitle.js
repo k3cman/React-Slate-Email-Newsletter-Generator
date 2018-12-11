@@ -1,6 +1,7 @@
 import React from "react";
 
 function HeadTitle(props) {
+  console.log(props);
   return (
     <table
       align="center"

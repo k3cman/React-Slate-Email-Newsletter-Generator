@@ -49,11 +49,88 @@
       },
       {
         "object": "block",
-        "type": "product-row"
-      },
-      {
-        "object": "block",
-        "type": "product-row"
+        "type": "table",
+        "nodes": [
+          {
+            "object": "block",
+            "type": "table-row",
+            "nodes": [
+              {
+                "object": "block",
+                "type": "table-data",
+                "nodes": [
+                  {
+                    "object": "block",
+                    "type": "product-image",
+                    "data": {
+                      "src": "http://cms.enmongroup.com/images/items/quCyyEaRgC.jpg"
+                    }
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "table-data",
+                "nodes": [
+                  {
+                    "object": "block",
+                    "type": "product-image",
+                    "data": {
+                      "src": "http://cms.enmongroup.com/images/items/0xKK6VR8ZU.jpg",
+                      "style": "paddingTop:'100px'"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "block",
+            "type": "table-row",
+            "nodes": [
+              {
+                "object": "block",
+                "type": "table-data",
+                "nodes": [
+                  {
+                    "object": "block",
+                    "type": "product-title",
+                    "nodes": [
+                      {
+                        "object": "text",
+                        "leaves": [
+                          {
+                            "text": "Treverkhome Bettula"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "table-data",
+                "nodes": [
+                  {
+                    "object": "block",
+                    "type": "product-title",
+                    "nodes": [
+                      {
+                        "object": "text",
+                        "leaves": [
+                          {
+                            "text": "Treverkhome Bettula"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

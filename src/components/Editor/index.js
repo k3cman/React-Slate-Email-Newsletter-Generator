@@ -72,6 +72,32 @@ export default class EditorMain extends Component {
         return <SimpleText {...attributes}>{children}</SimpleText>;
       case "product-row":
         return <Product {...attributes} />;
+      case "table":
+        return (
+          <table
+            align="center"
+            cellPadding="0"
+            cellspacing="0"
+            width="600px"
+            style={{ borderCollapse: "collapse" }}
+            {...attributes}
+          >
+            <tbody>{children}</tbody>
+          </table>
+        );
+      case "table-row":
+        return <tr>{children}</tr>;
+      case "table-data":
+        return (
+          <td style={{ textAlign: "center", padding: "10px" }}>{children}</td>
+        );
+      case "product-image": {
+        const src = node.data.get("src");
+        const style = node.data.get("style");
+        return <img src={src} style={{ style }} alt="" width="280" />;
+      }
+      case "product-title":
+        return <p style={{ width: "300px", margin: "0" }}>{children}</p>;
       case "headnig-one":
         return <h1 {...attributes}>{children}</h1>;
       default:
@@ -82,7 +108,7 @@ export default class EditorMain extends Component {
     const { children, mark, attributes } = props;
     switch (mark.type) {
       case "bold":
-        return <stron {...attributes}>{children}</stron>;
+        return <strong {...attributes}>{children}</strong>;
       default:
         return next();
     }
