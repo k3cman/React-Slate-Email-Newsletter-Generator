@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Editor } from "slate-react";
 import { Value } from "slate";
 import initialValue from "./value.json";
+import Toolbar from "../Toolbar";
 import { Logo, Title, Subtitle } from "./blocks";
 import Product from "./elements/Product.js";
 
@@ -41,18 +42,11 @@ export default class EditorMain extends Component {
             renderMark={this.renderMark}
           />
         </div>
-        <div className="toolbar">
-          <ul>
-            <li>IC</li>
-            <li>IC</li>
-            <li>IC</li>
-            <li>IC</li>
-            <li>IC</li>
-          </ul>
-        </div>
+        <Toolbar />
       </Fragment>
     );
   }
+
   renderNode = (props, editor, next) => {
     const { attributes, children, node } = props;
     switch (node.type) {
@@ -145,8 +139,71 @@ export default class EditorMain extends Component {
           </p>
         );
 
-      case "headnig-one":
-        return <h1 {...attributes}>{children}</h1>;
+      case "info-table":
+        return (
+          <table
+            align="center"
+            cellpadding="0"
+            cellspacing="0"
+            width="600px"
+            style={{
+              borderCollapse: "collapse",
+              border: "1px solid #acacac",
+              marginTop: "30px",
+              textAlign: "center"
+            }}
+            {...attributes}
+          >
+            <tbody>{children}</tbody>
+          </table>
+        );
+      case "info-row":
+        return (
+          <tr
+            {...attributes}
+            style={{
+              border: "1px solid $acacac",
+              backgroundColor: "rgba(0,0,0,0.05)",
+              paddingTop: "10px"
+            }}
+          >
+            {children}
+          </tr>
+        );
+      case "info-data":
+        return <td {...attributes}>{children}</td>;
+      case "info-head":
+        return <th {...attributes}>{children}</th>;
+      case "info-p":
+        return (
+          <p style={{ padding: 0, margin: 0 }} {...attributes}>
+            {children}
+          </p>
+        );
+      case "footer":
+        return (
+          <table
+            align="center"
+            cellpadding="0"
+            cellspacing="0"
+            width="600px"
+            style={{
+              borderCollapse: "collapse",
+              border: "1px solid #acacac",
+              marginTop: "30px",
+              textAlign: "center",
+              backgroundColor: "#0C4DA2",
+              color: "white"
+            }}
+            {...attributes}
+          >
+            <tbody>
+              <tr>
+                <td>{children}</td>
+              </tr>
+            </tbody>
+          </table>
+        );
       default:
         return next();
     }
@@ -156,6 +213,12 @@ export default class EditorMain extends Component {
     switch (mark.type) {
       case "bold":
         return <strong {...attributes}>{children}</strong>;
+      case "h1":
+        return (
+          <h1 style={{ margin: "0" }} {...attributes}>
+            {children}
+          </h1>
+        );
       default:
         return next();
     }

@@ -232,12 +232,21 @@
                   {
                     "object": "text",
                     "type": "h1-icon",
-                    "leaves": ["1."]
+                    "leaves": [
+                      {
+                        "text": "1.",
+                        "marks": [{ "type": "h1" }]
+                      }
+                    ]
                   },
                   {
                     "object": "text",
                     "type": "p-icon",
-                    "leaves": ["klasa"]
+                    "leaves": [
+                      {
+                        "text": "klasa"
+                      }
+                    ]
                   }
                 ]
               }
@@ -252,40 +261,23 @@
                 "type": "icon-wrapper",
                 "nodes": [
                   {
-                    "object": "block",
-                    "type": "icon",
-                    "data": {
-                      "src": "http://www.enmongroup.com/data/newsletter/email/foot.png",
-                      "text": "Podna"
-                    }
-                  }
-                ]
-              },
-              {
-                "object": "block",
-                "type": "icon-wrapper",
-                "nodes": [
+                    "object": "text",
+                    "type": "h1-icon",
+                    "leaves": [
+                      {
+                        "text": "R10",
+                        "marks": [{ "type": "h1" }]
+                      }
+                    ]
+                  },
                   {
-                    "object": "block",
-                    "type": "icon",
-                    "data": {
-                      "src": "http://www.enmongroup.com/data/newsletter/email/wall.png",
-                      "text": "Zidna"
-                    }
-                  }
-                ]
-              },
-              {
-                "object": "block",
-                "type": "icon-wrapper",
-                "nodes": [
-                  {
-                    "object": "block",
-                    "type": "icon",
-                    "data": {
-                      "src": "http://www.enmongroup.com/data/newsletter/email/snowflake.png",
-                      "text": "Gres"
-                    }
+                    "object": "text",
+                    "type": "p-icon",
+                    "leaves": [
+                      {
+                        "text": "protivkliznost"
+                      }
+                    ]
                   }
                 ]
               },
@@ -296,14 +288,423 @@
                   {
                     "object": "text",
                     "type": "h1-icon",
-                    "leaves": ["1."]
+                    "leaves": [
+                      {
+                        "text": "90°",
+                        "marks": [{ "type": "h1" }]
+                      }
+                    ]
                   },
                   {
                     "object": "text",
                     "type": "p-icon",
-                    "leaves": ["klasa"]
+                    "leaves": [
+                      {
+                        "text": "rektificirano"
+                      }
+                    ]
                   }
                 ]
+              },
+              {
+                "object": "block",
+                "type": "icon-wrapper",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "h1-icon",
+                    "leaves": [
+                      {
+                        "text": "6",
+                        "marks": [{ "type": "h1" }]
+                      }
+                    ]
+                  },
+                  {
+                    "object": "text",
+                    "type": "p-icon",
+                    "leaves": [
+                      {
+                        "text": "broj lica"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "icon-wrapper",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "h1-icon",
+                    "leaves": [
+                      {
+                        "text": "MAT",
+                        "marks": [{ "type": "h1" }]
+                      }
+                    ]
+                  },
+                  {
+                    "object": "text",
+                    "type": "p-icon",
+                    "leaves": [
+                      {
+                        "text": "povrsina"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "info-table",
+        "nodes": [
+          {
+            "object": "block",
+            "type": "info-row",
+            "nodes": [
+              {
+                "object": "block",
+                "type": "info-head",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "Naziv",
+                        "marks": [{ "type": "bold" }]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-head",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "Dimenzija",
+                        "marks": [{ "type": "bold" }]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-head",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "Pak.(m2)",
+                        "marks": [{ "type": "bold" }]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-head",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "Pal.(m2)",
+                        "marks": [{ "type": "bold" }]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-head",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "Pal.(kg)",
+                        "marks": [{ "type": "bold" }]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "block",
+            "type": "info-row",
+            "nodes": [
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "Treverhome Charamel"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "20x120"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "0.99"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "99"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "1345"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "block",
+            "type": "info-row",
+            "nodes": [
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "Treverhome Charamel"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "20x120"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "0.99"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "99"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "1345"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "object": "block",
+            "type": "info-row",
+            "nodes": [
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "Treverhome Charamel"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "20x120"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "0.99"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "99"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "object": "block",
+                "type": "info-data",
+                "nodes": [
+                  {
+                    "object": "text",
+                    "type": "info-p",
+                    "leaves": [
+                      {
+                        "text": "1345"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "footer",
+        "nodes": [
+          {
+            "object": "text",
+            "type": "info-p",
+            "leaves": [
+              {
+                "text": "Bulevar Oslobodjenja 205, Beograd"
               }
             ]
           }
