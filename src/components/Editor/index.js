@@ -2,11 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Editor } from "slate-react";
 import { Value } from "slate";
 import initialValue from "./value.json";
-import Logo from "./elements/Logo";
-import HeadTitle from "./elements/HeadTitle";
-import HeadSubTitle from "./elements/HeadSubTitle.js";
-import MainImg from "./elements/MainImg.js";
-import SimpleText from "./elements/SimpleText.js";
+import { Logo, Title, Subtitle } from "./blocks";
 import Product from "./elements/Product.js";
 
 const DEFAULT_DONE = "paragraph";
@@ -62,14 +58,16 @@ export default class EditorMain extends Component {
     switch (node.type) {
       case "logo":
         return <Logo {...attributes} />;
-      case "head-title":
-        return <HeadTitle {...attributes}>{children}</HeadTitle>;
-      case "head-sub":
-        return <HeadSubTitle {...attributes}>{children}</HeadSubTitle>;
-      case "main-image":
-        return <MainImg {...attributes} />;
-      case "simple-text":
-        return <SimpleText {...attributes}>{children}</SimpleText>;
+      case "title":
+        return <Title {...attributes}>{children}</Title>;
+      case "subtitle":
+        return <Subtitle {...attributes}>{children}</Subtitle>;
+      case "hero-img": {
+        const src = node.data.get("src");
+        return <img {...attributes} src={src} width="600px" />;
+      }
+      case "product-name":
+        return <p style={{ textAlign: "center" }}>{children}</p>;
       case "product-row":
         return <Product {...attributes} />;
       case "table":
@@ -77,9 +75,28 @@ export default class EditorMain extends Component {
           <table
             align="center"
             cellPadding="0"
-            cellspacing="0"
+            cellSpacing="0"
             width="600px"
             style={{ borderCollapse: "collapse" }}
+            {...attributes}
+          >
+            <tbody>{children}</tbody>
+          </table>
+        );
+      case "table-border-t":
+        return (
+          <table
+            align="center"
+            cellPadding="0"
+            cellSpacing="0"
+            width="600px"
+            style={{
+              borderCollapse: "collapse",
+              borderTop: "1px solid #acacac",
+              paddinTop: "20px",
+              marginTop: "30px",
+              textAlign: "center"
+            }}
             {...attributes}
           >
             <tbody>{children}</tbody>
@@ -88,16 +105,46 @@ export default class EditorMain extends Component {
       case "table-row":
         return <tr>{children}</tr>;
       case "table-data":
-        return (
-          <td style={{ textAlign: "center", padding: "10px" }}>{children}</td>
-        );
+        return <td style={{ textAlign: "center" }}>{children}</td>;
       case "product-image": {
         const src = node.data.get("src");
         const style = node.data.get("style");
-        return <img src={src} style={{ style }} alt="" width="280" />;
+        return (
+          <img {...attributes} src={src} style={{ style }} alt="" width="280" />
+        );
       }
-      case "product-title":
-        return <p style={{ width: "300px", margin: "0" }}>{children}</p>;
+      case "icon-wrapper": {
+        return <td style={{ width: "120px" }}>{children}</td>;
+      }
+      case "icon": {
+        const src = node.data.get("src");
+        const text = node.data.get("text");
+        return (
+          <Fragment>
+            <img
+              {...attributes}
+              style={{ paddingTop: "10px" }}
+              src={src}
+              height="30px"
+            />
+            <br />
+            {text}
+          </Fragment>
+        );
+      }
+      case "h1-icon":
+        return (
+          <h1 style={{ padding: "10px 0 0 0", margin: "0" }} {...attributes}>
+            {children}
+          </h1>
+        );
+      case "p1-icon":
+        return (
+          <p style={{ padding: "0", margin: "0" }} {...attributes}>
+            {children}
+          </p>
+        );
+
       case "headnig-one":
         return <h1 {...attributes}>{children}</h1>;
       default:
